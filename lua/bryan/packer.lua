@@ -11,13 +11,22 @@ use {
   requires = { {'nvim-lua/plenary.nvim'} }
 }
 
-use ({ 
-	'ellisonleao/gruvbox.nvim',
-	as = 'gruvbox',
-	config = function()
-		vim.cmd('colorscheme gruvbox')
-	end
-})
+-- use ({ 
+-- 	'ellisonleao/gruvbox.nvim',
+-- 	as = 'gruvbox',
+-- 	config = function()
+-- 		vim.cmd('colorscheme gruvbox')
+-- 	end
+-- })
+
+use {
+    'maxmx03/solarized.nvim',
+    config = function()
+      vim.o.background = 'dark' -- or 'light'
+
+      vim.cmd.colorscheme 'solarized'
+    end
+}
 
 use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 use('nvim-treesitter/playground')
