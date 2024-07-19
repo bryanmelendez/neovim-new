@@ -11,6 +11,8 @@ use {
   requires = { {'nvim-lua/plenary.nvim'} }
 }
 
+use { "catppuccin/nvim", as = "catppuccin" }
+
 -- use ({ 
 -- 	'ellisonleao/gruvbox.nvim',
 -- 	as = 'gruvbox',
@@ -19,14 +21,21 @@ use {
 -- 	end
 -- })
 
-use {
-    'maxmx03/solarized.nvim',
-    config = function()
-      vim.o.background = 'dark' -- or 'light'
+-- use {
+--     'maxmx03/solarized.nvim',
+--     config = function()
+--       vim.o.background = 'dark' -- or 'light'
+-- 
+--       vim.cmd.colorscheme 'solarized'
+--     end
+-- }
 
-      vim.cmd.colorscheme 'solarized'
-    end
-}
+-- use {
+--     'EdenEast/nightfox.nvim', -- Packer
+--     config = function() 
+--         vim.cmd("colorscheme carbonfox")
+--     end
+-- }
 
 use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 use('nvim-treesitter/playground')
